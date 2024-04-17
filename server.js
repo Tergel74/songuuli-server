@@ -24,8 +24,10 @@ app.use(cookieParser());
 
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
+const regionRouters = require("./routes/regionRoutes");
 app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
+app.use("/region", regionRouters);
 
 swagger(app);
 

@@ -69,7 +69,7 @@ const checkPassword = async function (password, hash) {
 const tokenGenerate = function (userId, expiresIn) {
     const secret = process.env.SECRET;
     const access_token = jsonwebtoken.sign({ id: userId }, secret, {
-        expiresIn: "168h",
+        expiresIn: "24h",
     });
     const refresh_token = jsonwebtoken.sign(
         { id: userId },

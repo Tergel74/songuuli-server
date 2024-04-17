@@ -115,6 +115,10 @@ const UserSchema = new Schema(
             type: Number,
             required: true,
         },
+        subRegion: {
+            type: Schema.Types.ObjectId,
+            ref: "SubRegion",
+        },
     },
     { timestamps: true }
 );
